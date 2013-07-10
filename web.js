@@ -1,11 +1,10 @@
-var express = require('express');
-var file = require('fs');
+var express = require('express'), fs = require('fs');
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) 
 {
-  var index = file.readFile('./index.html', 'utf8');
+  var index = fs.readFile('./index.html', 'utf8');
 
   response.send(index);
 });
