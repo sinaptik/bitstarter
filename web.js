@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) 
 {
-  var index = fs.readFile('index.html', 'utf8');
+  var index = fs.readFile('./index.html', 'utf8');
 
   response.send(index.toString('utf-8'));
 });
