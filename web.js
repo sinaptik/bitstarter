@@ -9,7 +9,7 @@ app.get('/', function(request, response)
 {
   var index = fs.readFile('index.html', 'utf8');
 
-  response.send(index);
+  response.send(index.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
